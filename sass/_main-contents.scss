@@ -1,0 +1,92 @@
+@media screen and (min-width: $bp-mobile) {
+  .hero-image {
+    img {
+      content: url(../images/hero-desktop.jpg);
+    }
+
+    margin-left: auto;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  padding: 2rem;
+  width: 50%;
+}
+
+.hero-image {
+  grid-area: hero;
+  margin-bottom: 3rem;
+}
+
+.contents {
+  font-size: 0.9rem;
+  grid-area: contents;
+  text-align: center;
+  padding: 0 2rem;
+
+  @media screen and (min-width: 950px) {
+    text-align: left;
+    margin-top: -12rem;
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--dark-Grayish-red);
+    letter-spacing: 10px;
+
+    span {
+      font-weight: 300;
+      color: var(--desaturated-red);
+    }
+  }
+
+  .form {
+    height: 3rem;
+    position: relative;
+
+    .input-email {
+      height: 100%;
+      width: 100%;
+      border: 1px solid var(--desaturated-red);
+      color: var(--desaturated-red);
+      border-radius: 9999px;
+      padding: 0 1.5rem;
+
+      &:hover {
+        border-width: 2px;
+      }
+
+      &:focus {
+        outline-offset: 3px;
+        outline-color: var(--desaturated-red);
+        outline-style: dotted;
+        outline-width: 3px;
+        border-width: 2px;
+      }
+    }
+
+    .btn-submit {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 4rem;
+      font-size: 2rem;
+      background: var(--gradient-pinkish);
+      border: none;
+      color: white;
+      font-weight: 300;
+      border-radius: 99999px;
+      box-shadow: 0 5px 20px var(--desaturated-red);
+      cursor: pointer;
+    }
+  }
+}

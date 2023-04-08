@@ -1,0 +1,28 @@
+:root.dark-mode {
+  --Very-Dark-Grayish-Blue: hsl(218, 27%, 59%);
+  --Light-Grayish-Blue: hsl(210, 30%, 8%);
+  --White: hsl(220, 10%, 6%);
+  --dark: rgba(255, 255, 255, 0.8);
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  right: 1.3rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 3;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.4rem;
+
+  border-radius: 50%;
+  background-color: var(--dark);
+  box-shadow: 0 0 10px var(--dark);
+
+  svg {
+    filter: brightness(200%);
+    height: 100%;
+    width: 100%;
+    fill: var(--White);
+  }
+}
