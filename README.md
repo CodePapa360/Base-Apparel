@@ -13,7 +13,7 @@
 </div>
 
   <p align="center">
-    This is my solution for the Base Apparel coming soon page challenge on Frontend Mentor. Check out the live site!
+    This is my solution for the Base Apparel coming soon page design challenge on Frontend Mentor. The objective was to recreate the design as accurately as possible with email validation. Take a look at the live site!
   </p>
 
 ### Screenshot
