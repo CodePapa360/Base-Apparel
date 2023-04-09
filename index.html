@@ -53,7 +53,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./sass/main.scss" />
     <script defer src="./script.js"></script>
 
     <title>Base Apparel coming soon | Frontend Mentor | Alamin</title>
@@ -61,8 +61,21 @@
   <body>
     <div class="top-container">
       <main class="main-contents">
-        <div class="logo">
-          <img src="./images/logo.svg" alt="Base Apparel logo" />
+        <div class="top-section">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="Base Apparel logo" />
+          </div>
+
+          <div>
+            <input type="checkbox" class="dark-mode-checkbox" id="dark-mode-checkbox">
+
+            <label for="dark-mode-checkbox" class="dark-mode-lebel">
+              
+            <img class="icon-dark" src="./images/icon-dark.svg" alt="Dark icon">
+            <img class="icon-light" src="./images/icon-light.svg" alt="Light icon">
+            <div class='dark-mode-middle-circle'>
+          </label>
+        </div>
         </div>
 
         <div class="hero-image">
@@ -81,9 +94,16 @@
               class="input-email"
               type="email"
               placeholder="Email Address"
-              required
             />
+
             <button class="btn-submit" type="submit">></button>
+
+            <img
+              class="error-icon"
+              src="./images/icon-error.svg"
+              alt="Error icon"
+            />
+            <p class="error-output"></p>
           </form>
         </div>
       </main>

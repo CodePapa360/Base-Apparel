@@ -1,28 +1,73 @@
 :root.dark-mode {
-  --Very-Dark-Grayish-Blue: hsl(218, 27%, 59%);
-  --Light-Grayish-Blue: hsl(210, 30%, 8%);
-  --White: hsl(220, 10%, 6%);
-  --dark: rgba(255, 255, 255, 0.8);
+  // Primary
+  --desaturated-red: hsl(0, 82%, 85%);
+
+  // Neutral
+  --dark-Grayish-red: hsl(0, 9%, 68%);
+
+  // Gradients
+  --gradient-whiteish: linear-gradient(
+    135deg,
+    hsl(247, 20%, 9%),
+    hsl(244, 29%, 11%)
+  );
+
+  --success: #00d856;
+
+  //////
+  --white: rgb(19, 18, 29);
+  --brightness: 200%;
 }
 
-#dark-mode-toggle {
-  position: absolute;
-  right: 1.3rem;
-  top: 1rem;
-  cursor: pointer;
-  z-index: 3;
-  height: 3rem;
-  width: 3rem;
-  padding: 0.4rem;
+.dark-mode-checkbox {
+  display: none;
+}
 
-  border-radius: 50%;
-  background-color: var(--dark);
-  box-shadow: 0 0 10px var(--dark);
-
-  svg {
-    filter: brightness(200%);
-    height: 100%;
-    width: 100%;
-    fill: var(--White);
+.dark-mode-lebel {
+  > * {
+    user-select: none;
   }
+
+  --sh-height: 1.7rem;
+  --border: calc(var(--sh-height) / 15);
+  position: relative;
+  width: calc(var(--sh-height) * 2);
+  height: var(--sh-height);
+  background-color: #090831;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 99999px;
+  border: var(--border) solid rgb(56, 68, 122);
+  padding: 0 1px;
+  box-shadow: 0 0 10px rgba(24, 27, 48, 0.3);
+  cursor: pointer;
+
+  margin-right: 1rem;
+
+  @media screen and (min-width: $bp-small) {
+    --sh-height: 2rem;
+  }
+
+  .dark-mode-middle-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0%;
+    width: var(--sh-height);
+    height: calc(var(--sh-height) - var(--border) - var(--border));
+    border-radius: 99999px;
+    background-color: #d4dbfd;
+    transition: left 0.2s ease-in-out;
+    border: var(--border) solid #6770ee;
+  }
+
+  > img {
+    height: calc(var(--sh-height) - 0.5rem);
+    width: calc(var(--sh-height) - 0.5rem);
+  }
+}
+
+.dark-mode-checkbox:checked ~ .dark-mode-lebel .dark-mode-middle-circle {
+  left: calc(100% - var(--sh-height));
 }

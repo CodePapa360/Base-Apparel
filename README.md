@@ -71,10 +71,17 @@ npm start
 
 ### What I learned
 
+Building this project has provided me with valuable learning experiences. One of the challenges I encountered was implementing email validation using JavaScript, which involved learning about regular expressions and how to validate user input.
+
+Additionally, I improved my layout skills by working with responsive images and using CSS Grid.
+
+Overall, this project has helped me to build on my existing knowledge and gain new insights.
+
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [RegexMagic](https://www.regular-expressions.info/email.html) - This article by <b>Jan Goyvaerts</b> provides an in-depth explanation of how to use regular expressions to validate email addresses. The article not only explains how to write regular expressions for email validation but also covers the common mistakes made while writing regular expressions for email validation.
+
+It provides clear and concise examples of regular expressions for email validation and also explains the logic behind each regular expression.
 
 ## Author
 

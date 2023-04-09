@@ -1,33 +1,54 @@
-@media screen and (min-width: $bp-mobile) {
-  .hero-image {
-    img {
-      content: url(../images/hero-desktop.jpg);
-    }
-
-    margin-left: auto;
-  }
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   grid-area: logo;
   padding: 2rem;
-  width: 50%;
+  max-width: 60%;
+  filter: brightness(var(--brightness));
+
+  @media screen and (min-width: $bp-small) {
+    padding: 2rem 1rem;
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    padding: 2rem 3rem;
+  }
 }
 
 .hero-image {
   grid-area: hero;
-  margin-bottom: 3rem;
+  margin: auto;
+
+  @media screen and (min-width: $bp-small) {
+    height: 100%;
+    margin-right: 0;
+
+    img {
+      content: url(../images/hero-desktop.jpg);
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .contents {
-  font-size: 0.9rem;
   grid-area: contents;
+  font-size: 0.9rem;
   text-align: center;
   padding: 0 2rem;
 
-  @media screen and (min-width: 950px) {
+  @media screen and (min-width: $bp-small) {
     text-align: left;
-    margin-top: -12rem;
+    padding: 1rem 1rem;
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    padding: 1rem 3rem;
   }
 
   > *:not(:last-child) {
@@ -36,11 +57,17 @@
 
   &__header {
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2.5rem; // incase clamp is not supported
+    font-size: clamp(2rem, 10vw, 3.5rem);
     font-weight: 400;
     line-height: 1;
     color: var(--dark-Grayish-red);
     letter-spacing: 10px;
+    margin-top: 3rem;
+
+    @media screen and (min-width: $bp-medium) {
+      margin-top: 0;
+    }
 
     span {
       font-weight: 300;
@@ -58,14 +85,15 @@
       border: 1px solid var(--desaturated-red);
       color: var(--desaturated-red);
       border-radius: 9999px;
-      padding: 0 1.5rem;
+      padding: 0 5.2rem 0 1.5rem;
+      background-color: var(--white);
 
       &:hover {
-        border-width: 2px;
+        border-width: 2px !important;
       }
 
       &:focus {
-        outline-offset: 3px;
+        outline-offset: 1px;
         outline-color: var(--desaturated-red);
         outline-style: dotted;
         outline-width: 3px;
@@ -87,6 +115,30 @@
       border-radius: 99999px;
       box-shadow: 0 5px 20px var(--desaturated-red);
       cursor: pointer;
+
+      &:hover {
+        background: var(--gradient-pinkish-alt);
+      }
+
+      &:active {
+        background: var(--gradient-pinkish);
+      }
+    }
+
+    .error-icon {
+      position: absolute;
+      right: 4.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+      user-select: none;
+      max-width: 1.5rem;
+    }
+
+    .error-output {
+      position: absolute;
+      left: 1rem;
+      bottom: -2rem;
     }
   }
 }

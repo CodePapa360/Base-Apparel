@@ -12,17 +12,35 @@
     hsl(0, 80%, 86%),
     hsl(0, 74%, 74%)
   );
+  --gradient-pinkish-alt: linear-gradient(
+    135deg,
+    hsl(0, 74%, 74%),
+    hsl(0, 80%, 86%)
+  );
   --gradient-whiteish: linear-gradient(
     135deg,
     hsl(0, 0%, 100%),
     hsl(0, 100%, 98%)
   );
+
+  --success: #007e33;
 }
 
-$bp-mobile: 700px;
+$bp-small: 600px;
+$bp-medium: 700px;
+$bp-large: 1000px;
+
+::selection {
+  background-color: var(--desaturated-red);
+  color: var(--dark-Grayish-red);
+}
 
 html {
-  @media screen and (min-width: $bp-mobile) {
+  @media screen and (min-width: $bp-small) {
+    font-size: 100%;
+  }
+
+  @media screen and (min-width: $bp-large) {
     font-size: 150%;
   }
 }
@@ -31,6 +49,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background: var(--gradient-whiteish);
   color: var(--desaturated-red);
+  overflow-x: hidden;
 }
 
 .main-contents {
@@ -40,20 +59,17 @@ body {
     "logo"
     "hero"
     "contents";
-  max-width: 375px;
+  max-width: $bp-small;
   margin: auto;
 
-  @media screen and (min-width: 950px) {
+  @media screen and (min-width: $bp-small) {
     max-width: 1440px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "logo hero"
       "contents hero";
+
     min-height: calc(100vh - 101.6px); //Incase dvh is not supported
     min-height: calc(100dvh - 101.6px);
-  }
-
-  @media screen and (min-width: 1000px) {
-    padding-left: 10%;
   }
 }
