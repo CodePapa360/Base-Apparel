@@ -20,7 +20,7 @@
 
 <a align="center" href="https://base-apparel-alamin.netlify.app/">
 
-<img src="screenshots/"/>
+<img src="screenshots/Compared - Base Apparel coming soon - dark mode.png"/>
 </a>
 
 ### The challenge
