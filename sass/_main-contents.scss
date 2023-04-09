@@ -85,7 +85,7 @@
       border: 1px solid var(--desaturated-red);
       color: var(--desaturated-red);
       border-radius: 9999px;
-      padding: 0 5.2rem 0 1.5rem;
+      padding: 0 5.8rem 0 1.5rem;
       background-color: var(--white);
 
       &:hover {
@@ -107,14 +107,18 @@
       top: 0;
       height: 100%;
       width: 4rem;
-      font-size: 2rem;
       background: var(--gradient-pinkish);
       border: none;
-      color: white;
-      font-weight: 300;
       border-radius: 99999px;
       box-shadow: 0 5px 20px var(--desaturated-red);
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 40%;
+      }
 
       &:hover {
         background: var(--gradient-pinkish-alt);
